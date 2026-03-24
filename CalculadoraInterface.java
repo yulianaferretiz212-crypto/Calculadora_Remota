@@ -11,4 +11,6 @@ public interface CalculadoraInterface extends Remote {
     double sumar(double a, double b) throws RemoteException;
 
     double restar(double a, double b) throws RemoteException;
+
+    double multiplicar(double a, double b) throws RemoteException;
 }
