@@ -1,3 +1,17 @@
-public class CalculadoraImpl {
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+//IMPLEMENTACION
+//AQUI SE DEFNE COMO SE EJECUTA CADA OPERACION
+//EXTIENDE UnicastRemoteObejct para poder recibir llamadas remotas
+//Implementa CalculadoraInterface para cumplir el contrato
+public class CalculadoraImpl extends UnicastRemoteObject implements CalculadoraInterface {
+
+    // Constructor obligatorio que lanza RemoteException.
+    // Llama a super () para que UnicastRemoteException
+    // Registre este objeto y lo ponga a escuchar en la red.
+    public CalculadoraImpl() throws RemoteException {
+        super();
+    }
 
 }
