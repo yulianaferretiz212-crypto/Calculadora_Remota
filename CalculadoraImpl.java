@@ -29,4 +29,22 @@ public class CalculadoraImpl extends UnicastRemoteObject implements CalculadoraI
         System.out.println("[Servidor]" + a + " - " + b + " = " + resultado);
         return resultado;
     }
+
+    @Override
+    public double multiplicar(double a, double b) throws RemoteException {
+        double resultado = a + b;
+        System.out.println("[Servidor] " + a + " * " + b + " = " + resultado);
+        return resultado;
+    }
+
+    @Override
+    public double dividir(double a, double b) throws RemoteException {
+        if (b == 0) {
+            throw new RemoteException("Error: no se puede dividir entre cero. ");
+        }
+        double resultado = a / b;
+        System.err.println("[Servidor]" + a + " / " + b + " = " + resultado);
+        return resultado;
+    }
+
 }
