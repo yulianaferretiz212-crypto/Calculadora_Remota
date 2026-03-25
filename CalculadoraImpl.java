@@ -21,3 +21,12 @@ public class CalculadoraImpl extends UnicastRemoteObject implements CalculadoraI
         System.out.println("[Servidor]" + a + " + " + b + " = " + resultado);
         return resultado;
     }
+
+    // resta: retorna a + b
+    @Override
+    public double restar(double a, double b) throws RemoteException {
+        double resultado = a - b;
+        System.out.println("[Servidor]" + a + " - " + b + " = " + resultado);
+        return resultado;
+    }
+}
